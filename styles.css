@@ -141,7 +141,12 @@ p {
 .section {
   padding: 5rem 0;
 }
-
+.section-title {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
 .section-center {
   width: 90vw;
   margin: 0 auto;
@@ -155,11 +160,12 @@ p {
   margin-left: auto;
   margin-right: auto;
 } */
-/* .underline {
+.underline {
   width: 8rem;
   height: 0.25rem;
+  margin-bottom: 0.9rem;
   background-color: var(--clr-primary-5);
-} */
+}
 @media screen and (min-width: 992px) {
   .section-center {
     width: 95vw;
@@ -316,8 +322,6 @@ nav {
     justify-content: center;
     width: 50%;
     height: 0.25rem;
-    margin-bottom: 0.5rem;
-    background-color: var(--clr-primary-5);
   }
   .hero-center {
     flex-direction: column;
@@ -338,13 +342,6 @@ nav {
     object-fit: cover;
   }
 }
-
-/* .hero */
-/*
-=============== 
-Sidebar
-===============
-*/
 .sidebar {
   position: fixed;
   top: 0;
@@ -401,33 +398,60 @@ Sidebar
 .close-btn:hover {
   color: orange;
 }
-/*
-=============== 
-Hero
-===============
-*/
-/* underline added to globals */
 
-/*
-=============== 
-About
-===============
-*/
-/* section title added to globals */
+.project {
+  position: relative;
+  background: var(--clr-primary-6);
+  border-radius: var(--radius);
+  margin-bottom: 2rem;
+}
+.project-info {
+  text-align: center;
+  color: var(--clr-grey-1);
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  transition: var(--transition);
+  opacity: 0;
+}
 
-/*
-=============== 
-Services
-===============
-*/
-/* small screen layout setup */
-/* bg-grey in globals */
-
-/*
-=============== 
-Projects
-===============
-*/
+.project-info p {
+  text-transform: capitalize;
+  color: var(--clr-grey-3);
+  font-size: 1rem;
+  font-weight: bold;
+}
+.project:hover .project-info {
+  opacity: 1;
+}
+.project-img {
+  /* width: px; */
+  transition: var(--transition);
+  border-radius: var(--radius);
+  height: 25rem;
+  object-fit: cover;
+}
+.project:hover .project-img {
+  opacity: 0.1;
+  /* background-color: aqua; */
+}
+.project::after {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  border: 0.25rem solid var(--clr-grey-7);
+  border-radius: var(--radius);
+  transition: var(--transition);
+  opacity: 0;
+}
+.project:hover::after {
+  opacity: 1;
+  transform: scale(0.8);
+}
 
 /*
 =============== 
