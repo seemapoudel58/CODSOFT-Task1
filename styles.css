@@ -148,7 +148,7 @@ p {
   flex-direction: column;
 }
 .section-center {
-  width: 90vw;
+  width: 80vw;
   margin: 0 auto;
   max-width: 1170px;
 }
@@ -176,7 +176,7 @@ nav {
   /* margin-bottom: 2rem; */
   transform: var(--transition);
   background: var(--clr-primary-8);
-  border: 2px solid blue;
+  /* border: 2px solid blue; */
 }
 .nav-center {
   width: 100%;
@@ -391,6 +391,7 @@ nav {
   background: var(--clr-grey-9);
   border-radius: var(--radius);
   margin-bottom: 2rem;
+  width: 100%;
 }
 .project-info {
   text-align: center;
@@ -481,7 +482,30 @@ nav {
     font-size: 1rem;
   }
 }
+/* .skill-image {
+  height: 5rem;
+} */
+.skills-center {
+  padding: 3rem 0;
+  margin-top: 1rem;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-evenly;
+  gap: 1rem;
+}
 
+.skill {
+  flex: 0 0 10%;
+}
+.skills {
+  background: var(--clr-primary-7);
+  margin-bottom: 1rem;
+}
+/* @media screen and (max-width: 780px) {
+  .section-center {
+    width: 100%;
+  }
+} */
 /* 
 =============== 
 Connect

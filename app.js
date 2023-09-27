@@ -3,20 +3,32 @@ const navBtn = document.querySelector('.nav-btn');
 const closeBtn = document.querySelector('.close-btn');
 const sideBar = document.querySelector('.sidebar');
 const date = document.querySelector('#date');
-const projects = document.querySelectorAll('.project');
+const projectCards = document.querySelectorAll('.project');
+const screenWidth = window.innerWidth;
 
-if (window.innerWidth >= 780) {
-  for (const project of projects) {
-    project.addEventListener('mouseover', () => {
-      project.style.width = '200%';
+if (screenWidth > 780) {
+  projectCards.forEach((card) => {
+    card.addEventListener('mouseenter', () => {
+      card.style.width = '200%';
+      card.querySelector('.project-info').style.display = 'block';
+    });
+    card.addEventListener('mouseleave', () => {
+      card.querySelector('.project-info').style.display = 'none';
+      card.style.width = '';
+    });
+  });
+} else {
+  projectCards.forEach((card) => {
+    card.addEventListener('mouseenter', () => {
+      card.querySelector('.project-info').style.display = 'block';
     });
 
-    project.addEventListener('mouseout', () => {
-      project.style.width = '100%';
+    card.addEventListener('mouseleave', () => {
+      card.querySelector('.project-info').style.display = 'none';
     });
-  }
+  });
 }
-// add fixed class to navbar
+
 window.addEventListener('scroll', () => {
   if (window.pageYOffset > 50) {
     navbar.classList.add('navbar-fixed');
@@ -33,11 +45,3 @@ closeBtn.addEventListener('click', () => {
 });
 // set year
 date.innerHTML = new Date().getFullYear();
-
-// navBtn.addEventListener('click', () => {
-//   sideBar.classList.add('show-sidebar');
-//   //   console.log(sideBar);
-// });
-// closeBtn.addEventListener('click', () => {
-//   sideBar.classList.remove('show-sidebar');
-// });
