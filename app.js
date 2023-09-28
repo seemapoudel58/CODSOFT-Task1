@@ -6,10 +6,10 @@ const date = document.querySelector('#date');
 const projectCards = document.querySelectorAll('.project');
 const screenWidth = window.innerWidth;
 
-if (screenWidth > 780) {
+if (screenWidth > 900) {
   projectCards.forEach((card) => {
     card.addEventListener('mouseenter', () => {
-      card.style.width = '200%';
+      card.style.width = '300%';
       card.querySelector('.project-info').style.display = 'block';
     });
     card.addEventListener('mouseleave', () => {
