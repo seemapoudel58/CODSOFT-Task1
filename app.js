@@ -14,7 +14,6 @@ if (screenWidth > 900) {
     });
     card.addEventListener('mouseleave', () => {
       card.querySelector('.project-info').style.display = 'none';
-      card.style.width = '';
     });
   });
 } else {
@@ -28,6 +27,33 @@ if (screenWidth > 900) {
     });
   });
 }
+// window.addEventListener('resize', () => {
+//   // Get the current screen width
+//   const screenWidth = window.innerWidth;
+
+//   // Get the current screen size category
+//   const screenSizeCategory =
+//     screenWidth < 576
+//       ? 'xs'
+//       : screenWidth < 768
+//       ? 'sm'
+//       : screenWidth < 992
+//       ? 'md'
+//       : screenWidth < 1200
+//       ? 'lg'
+//       : 'xl';
+
+//   // Get the previous screen size category
+//   const previousScreenSizeCategory = localStorage.getItem('screenSizeCategory');
+
+//   // If the screen size category has changed, refresh the page
+//   if (screenSizeCategory !== previousScreenSizeCategory) {
+//     location.reload();
+//   }
+
+//   // Update the previous screen size category
+//   localStorage.setItem('screenSizeCategory', screenSizeCategory);
+// });
 
 window.addEventListener('scroll', () => {
   if (window.pageYOffset > 50) {
