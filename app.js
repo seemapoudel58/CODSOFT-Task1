@@ -3,57 +3,38 @@ const navBtn = document.querySelector('.nav-btn');
 const closeBtn = document.querySelector('.close-btn');
 const sideBar = document.querySelector('.sidebar');
 const date = document.querySelector('#date');
-const projectCards = document.querySelectorAll('.project');
-const screenWidth = window.innerWidth;
 
-if (screenWidth > 900) {
-  projectCards.forEach((card) => {
-    card.addEventListener('mouseenter', () => {
-      card.style.width = '300%';
-      card.querySelector('.project-info').style.display = 'block';
-    });
-    card.addEventListener('mouseleave', () => {
-      card.querySelector('.project-info').style.display = 'none';
-    });
+function handleCardHover(card) {
+  card.addEventListener('mouseenter', () => {
+    card.style.width = '250%';
+    card.querySelector('.project-info').style.display = 'block';
   });
-} else {
-  projectCards.forEach((card) => {
-    card.addEventListener('mouseenter', () => {
-      card.querySelector('.project-info').style.display = 'block';
-    });
 
-    card.addEventListener('mouseleave', () => {
-      card.querySelector('.project-info').style.display = 'none';
-    });
+  card.addEventListener('mouseleave', () => {
+    card.style.width = '100%';
+    card.querySelector('.project-img').style.transform = 'scale(1)';
+    card.querySelector('.project-info').style.display = 'none';
   });
 }
-// window.addEventListener('resize', () => {
-//   // Get the current screen width
-//   const screenWidth = window.innerWidth;
 
-//   // Get the current screen size category
-//   const screenSizeCategory =
-//     screenWidth < 576
-//       ? 'xs'
-//       : screenWidth < 768
-//       ? 'sm'
-//       : screenWidth < 992
-//       ? 'md'
-//       : screenWidth < 1200
-//       ? 'lg'
-//       : 'xl';
+const projectCards = document.querySelectorAll('.project');
 
-//   // Get the previous screen size category
-//   const previousScreenSizeCategory = localStorage.getItem('screenSizeCategory');
+function checkScreenWidth() {
+  const screenWidth = window.innerWidth;
 
-//   // If the screen size category has changed, refresh the page
-//   if (screenSizeCategory !== previousScreenSizeCategory) {
-//     location.reload();
-//   }
+  projectCards.forEach((card) => {
+    if (screenWidth > 900) {
+      handleCardHover(card);
+    } else {
+      card.removeEventListener('mouseenter', () => {});
+      card.removeEventListener('mouseleave', () => {});
+      card.style.width = '100%';
+    }
+  });
+}
 
-//   // Update the previous screen size category
-//   localStorage.setItem('screenSizeCategory', screenSizeCategory);
-// });
+window.addEventListener('load', checkScreenWidth);
+window.addEventListener('resize', checkScreenWidth);
 
 window.addEventListener('scroll', () => {
   if (window.pageYOffset > 50) {

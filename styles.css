@@ -136,10 +136,6 @@ p {
   color: var(--clr-grey-1);
   background: var(--clr-primary-7);
 }
-/* .social-icon {
-  display: block;
-} */
-/* section */
 .section {
   padding: 4rem 0;
 }
@@ -497,9 +493,6 @@ nav {
     font-size: 1.9rem;
   }
 }
-.skill-image {
-  height: 4rem;
-}
 @media screen and (min-width: 1170px) {
   .underline {
     width: 8rem;
@@ -511,6 +504,9 @@ nav {
   .skill-image {
     height: 6rem;
   }
+}
+.skill-image {
+  height: 4rem;
 }
 
 .skills-center {
