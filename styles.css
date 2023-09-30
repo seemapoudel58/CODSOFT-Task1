@@ -556,6 +556,7 @@ textarea {
 }
 .actions {
   width: 150px;
+  margin-top: 30px;
 }
 .actions input {
   border: 2px solid var(--clr-grey-4);
