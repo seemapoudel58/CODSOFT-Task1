@@ -587,6 +587,35 @@ textarea {
 .contact {
   background-color: var(--clr-primary-9);
 }
+.fields:focus {
+  border: 15px solid #000;
+  outline: none;
+}
+
+.fields:focus-within {
+  animation: blink 1s steps(2) infinite;
+}
+.field input,
+.field textarea {
+  padding-left: 10px;
+  font-size: 16px;
+}
+.field textarea {
+  padding-top: 16px;
+}
+@keyframes blink {
+  0% {
+    border-color: transparent;
+  }
+
+  50% {
+    border-color: #000;
+  }
+
+  100% {
+    border-color: transparent;
+  }
+}
 .alt {
   display: flex;
   margin: 0.5rem 0 0.25rem 0;
