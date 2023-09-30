@@ -652,8 +652,10 @@ textarea {
   }
   .alt {
     margin: 0;
-    margin: -4.5rem 0 3rem 0;
-    height: 164px;
+    border-bottom: 2px solid var(--clr-grey-9);
+
+    /* margin: -4.5rem 0 3rem 0; */
+    height: 138px;
   }
   .alt:first-child {
     border: none;
