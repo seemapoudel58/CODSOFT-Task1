@@ -1,0 +1,174 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Seema || About page</title>
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
+    />
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+
+  <body>
+    <nav id="nav">
+      <div class="nav-center">
+        <div class="nav-header">
+          <img src="./images/" alt="" class="nav-logo" />
+          <button class="nav-btn" id="nav-btn">
+            <i class="fas fa-bars"></i>
+          </button>
+        </div>
+        <ul class="nav-links">
+          <li>
+            <a href="index.html">home</a>
+          </li>
+          <li>
+            <a href="about.html">about</a>
+          </li>
+          <li>
+            <a href="projects.html">projects</a>
+          </li>
+          <li>
+            <a href="contact.html">contact</a>
+          </li>
+        </ul>
+      </div>
+    </nav>
+
+    <article class="sidebar" id="sidebar">
+      <div>
+        <button class="close-btn" id="close-btn">
+          <i class="fas fa-times"></i>
+        </button>
+        <ul class="sidebar-links">
+          <li>
+            <a href="index.html">home</a>
+          </li>
+          <li>
+            <a href="about.html">about</a>
+          </li>
+          <li>
+            <a href="projects.html">projects</a>
+          </li>
+
+          <li>
+            <a href="contact.html">contact</a>
+          </li>
+        </ul>
+        <!-- social icons -->
+        <ul class="sidebar-icons">
+          <li>
+            <a
+              href="https://www.linkedin.com/in/seema-poudel-985a1a230/"
+              target="_blank"
+              class="social-icon"
+            >
+              <i class="fab fa-linkedin"></i
+            ></a>
+          </li>
+          <li>
+            <a
+              href="https://github.com/seemapoudel58"
+              target="_blank"
+              class="social-icon"
+            >
+              <i class="fab fa-github"></i>
+            </a>
+          </li>
+        </ul>
+      </div>
+    </article>
+
+    <section class="section contact">
+      <div class="section-title">
+        <h2>Contact</h2>
+        <div class="underline"></div>
+      </div>
+      <div class="section-center contact-center">
+        <div id="footer">
+          <section class="contacts">
+            <form method="post" action="https://formspree.io/f/xqkjogzb">
+              <div class="fields">
+                <div class="field">
+                  <label for="name">Name</label>
+                  <input
+                    type="text"
+                    name="name"
+                    required=""
+                  /><!--  id="name"-->
+                </div>
+                <div class="field">
+                  <label for="email">Email</label>
+                  <input
+                    type="text"
+                    name="email"
+                    required=""
+                  /><!-- id="email"-->
+                </div>
+                <div class="field">
+                  <label for="message">Message</label>
+                  <textarea
+                    style="resize: none"
+                    rows="3"
+                    name="message"
+                    required=""
+                    data-gramm="false"
+                    wt-ignore-input="true"
+                  ></textarea>
+                </div>
+              </div>
+              <ul class="actions">
+                <li><input type="submit" value="Send Message" /></li>
+              </ul>
+            </form>
+          </section>
+          <section class="split">
+            <section class="alt">
+              <h3>Address</h3>
+              <p>Kathmandu, Nepal</p>
+            </section>
+            <section class="alt">
+              <h3>Phone</h3>
+              <p>+977 9847433721</p>
+            </section>
+            <section class="alt">
+              <h3>Email</h3>
+              <p>
+                <a href="mailto:simapoudel6@gmail.com" target="_blank"
+                  ><seema class="12"></seema>simapoudel6@gmail.com</a
+                >
+              </p>
+            </section>
+          </section>
+        </div>
+      </div>
+    </section>
+
+    <footer class="footer">
+      <ul class="hero-icons">
+        <li>
+          <a
+            href="https://www.linkedin.com/in/seema-poudel-985a1a230/"
+            target="_blank"
+            class="social-icon"
+          >
+            <i class="fab fa-linkedin"></i
+          ></a>
+        </li>
+        <li>
+          <a
+            href="https://github.com/seemapoudel58"
+            target="_blank"
+            class="social-icon"
+          >
+            <i class="fab fa-github"></i>
+          </a>
+        </li>
+      </ul>
+      <p>&copy;<span id="date"></span> seema poudel.all rights reserved</p>
+    </footer>
+    <script src="app.js"></script>
+  </body>
+</html>
