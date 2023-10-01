@@ -3,7 +3,7 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Seema || Skill Page</title>
+    <title>Seema || About page</title>
     <link
       rel="stylesheet"
       href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
@@ -12,6 +12,7 @@
   </head>
 
   <body>
+    <!-- navbar -->
     <nav id="nav">
       <div class="nav-center">
         <div class="nav-header">
@@ -40,12 +41,17 @@
       </div>
     </nav>
 
+    <!-- end of navbar -->
+    <!-- sidebar -->
     <article class="sidebar" id="sidebar">
       <div>
         <button class="close-btn" id="close-btn">
           <i class="fas fa-times"></i>
         </button>
         <ul class="sidebar-links">
+          <!-- <li>
+            <a href="index.html">home</a>
+          </li> -->
           <li>
             <a href="index.html">home</a>
           </li>
@@ -58,6 +64,7 @@
           <li>
             <a href="skill.html">skills</a>
           </li>
+
           <li>
             <a href="contact.html">contact</a>
           </li>
@@ -85,30 +92,49 @@
         </ul>
       </div>
     </article>
-
-    <section class="section skills">
-      <div class="section-title">
-        <h2>skills</h2>
-        <div class="underline"></div>
+    <header class="hero">
+      <div class="section-center hero-center">
+        <article class="hero-img">
+          <img src="./images/seema.jpg" alt="seema" class="hero-photo" />
+        </article>
+        <article class="hero-info">
+          <div class="underline"></div>
+          <h1>seema poudel</h1>
+          <h4>Frontend Enthusiast</h4>
+          <p>
+            I am currently a third-year student pursuing a bachelor's degree in
+            computer science and technology, with a strong passion for frontend
+            development. I approach web development challenges with dedication
+            and precision, aiming to create seamless and visually appealing user
+            experiences.I look forward to the opportunity to apply my skills and
+            knowledge to real-world projects and make a meaningful impact.
+          </p>
+          <a href="./present.pdf" target="_blank" class="btn hero-btn"
+            >Hire me</a
+          >
+          <ul class="hero-icons">
+            <li>
+              <a
+                href="https://www.linkedin.com/in/seema-poudel-985a1a230/"
+                target="_blank"
+                class="social-icon"
+              >
+                <i class="fab fa-linkedin"></i
+              ></a>
+            </li>
+            <li>
+              <a
+                href="https://github.com/seemapoudel58"
+                target="_blank"
+                class="social-icon"
+              >
+                <i class="fab fa-github"></i>
+              </a>
+            </li>
+          </ul>
+        </article>
       </div>
-      <div class="section-center skills-center">
-        <div class="skill">
-          <img src="./images/html-1.svg" alt="html" class="skill-image" />
-        </div>
-        <div class="skill">
-          <img src="./images/css-3.svg" alt="css" class="skill-image" />
-        </div>
-        <div class="skill">
-          <img src="./images/javascript-1.svg" alt="js" class="skill-image" />
-        </div>
-        <div class="skill">
-          <img src="./images/c-1.svg" alt="c++" class="skill-image" />
-        </div>
-        <div class="skill">
-          <img src="./images/c.svg" alt="c" class="skill-image" />
-        </div>
-      </div>
-    </section>
+    </header>
 
     <footer class="footer">
       <ul class="hero-icons">

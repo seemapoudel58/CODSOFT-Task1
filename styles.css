@@ -64,6 +64,12 @@ img:not(.nav-logo) {
   width: 100%;
   display: block;
 }
+.nav-logo {
+  width: 7rem;
+  height: 2rem;
+  /* display: flex; */
+  /* margin: 0 auto; */
+}
 
 h1,
 h2,
@@ -262,7 +268,7 @@ nav {
 }
 .hero {
   width: 100%;
-  background: var(--clr-primary-9);
+  background: var(--clr-primary-7);
 }
 .hero-center {
   min-height: calc(100vh - 4rem);
